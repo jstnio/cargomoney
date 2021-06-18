@@ -8,7 +8,34 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="shortcut icon" href="../images/CM.ico" type="image/x-icon">
         <style>
-           .tt {
+         video {
+            object-fit: cover;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    </style>
+    </head>
+    
+<body>
+ 
+<!--<div style="position: fixed; top: 0; width: 100%; height: 100%; z-index: -1;">
+  <video autoplay muted loop id="myIntro">
+  <source src="../images/dollar.mp4" type="video/mp4">
+</video>
+</div>-->
+<div class="text-center">
+    <br />
+    <h1 class="display-4">Welcome to CargoMoney</h1>
+    <p></p>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+@*Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>*@
+ 
+<style>
+    .tt {
         text-transform: lowercase;
         color: #07255E;
     }
@@ -29,31 +56,8 @@
         font-weight: 600;
         color: #F4F4F4;
     }
-
- video {
-  object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-    </style>
-    <div class="text-center">
-    <br />
-    <h1 class="display-4">Welcome to CargoMoney</h1>
-    <p></p>
-</div>
-
-</head>
-    
-<body>
+</style>
  
-    <div style="position: fixed; top: 0; width: 100%; height: 100%; z-index: -1;">
-  <video autoplay muted loop id="myIntro">
-  <source src="../images/dollar.mp4" type="video/mp4">
-</video>
-    </div>
 <div class="row">
     <div class="col-md-8">
         <br />
@@ -99,7 +103,7 @@
         speedWait = 1000, // Wait between typing and backspacing
         speedBetweenLines = 1000, //Wait between first and second lines
         speedBackspace = 25; //Backspace Speed
- 
+
     //Run the loop
     typeWriter("output", textArray);
  
@@ -171,9 +175,6 @@
             }
         }
     }
- 
-    </script>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</script>
 </body>
 </html>
