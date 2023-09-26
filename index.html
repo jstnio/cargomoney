@@ -105,18 +105,24 @@
         </p>
     </div>
     <div class="col-md-4">
-        <!-- Pop-up -->
+        
+    </div>
+</div>
+    </div>
+<!-- Pop-up -->
 <div class="popup-container bg-light" id="cookiePopup">
     <p class="text-black"><small>Please note that this website uses cookies to enhance your browsing experience. By continuing to use this site, you consent to the use of cookies in accordance with our <a asp-controller="Home" asp-action="Privacy">Privacy Policy</a>.</small></p>
     <button onclick="aceitarCookies()">Accept</button>
 </div>
-    </div>
-</div>
-    </div>
-<nav class="fixed-bottom bg-primary text-white text-center">
+    
+<nav class="fixed-bottom bg-light text-dark text-center" style="height: 50px">
     Cargo Money Ltd. | 1st Floor 124 Cleveland Street, London, UK - W1T 6PG +44 (20) 8133 6893
 </nav>
-
+    <script>var offcanvasElementList = [].slice.call(document.querySelectorAll('.offcanvas'))
+        var offcanvasList = offcanvasElementList.map(function (offcanvasEl) {
+            return new bootstrap.Offcanvas(offcanvasEl)
+        })
+    </script>
 <script>// Função para esconder o pop-up e definir um cookie de aceitação
         function aceitarCookies() {
             var popup = document.getElementById("cookiePopup");
