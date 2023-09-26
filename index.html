@@ -58,7 +58,6 @@
     <br />
     <br />
     <h1 class="text-left">The business hub for </br> <span class="display-2  text-primary border-info">Freight Forwarders</span></h1>
-    <p></p>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
  
@@ -90,13 +89,12 @@
     <div class="col-md-8">
         <br />
         <br />
-        <br />
-        
+        <br />   
     <h6 class="display-6"><image src="../images/CM-removebg.png" height="30"/> Airfreight</h6>
         <h6 class="display-6"><image src="../images/CM-removebg.png" height="30"/> Ocean Freight</h6>
         <h6 class="display-6"><image src="../images/CM-removebg.png" height="30"/> Multimodal Freight</h6>
         <br/>
-         <div style="width: 500px; height:300px">
+         <div style="width: 500px; height:150px">
             <div class="output" id="output">
                <h1 class="cursor"></h1> 
          </div>
@@ -110,9 +108,39 @@
     </div>
 </div>
     </div>
-<nav fixed-bottom bg-light>
-    Cargo Money Ltd. <br/> 1st Floor 124 Cleveland Street, London, UK - W1T 6PG +44 (20) 8133 6893
+<nav fixed-bottom bg-primary text-white text-center>
+    Cargo Money Ltd. | 1st Floor 124 Cleveland Street, London, UK - W1T 6PG +44 (20) 8133 6893
 </nav>
+<!-- Pop-up -->
+<div class="popup-container bg-light" id="cookiePopup">
+    <p class="text-black"><small>Please note that this website uses cookies to enhance your browsing experience. By continuing to use this site, you consent to the use of cookies in accordance with our <a asp-controller="Home" asp-action="Privacy">Privacy Policy</a>.</small></p>
+    <button onclick="aceitarCookies()">Accept</button>
+</div>
+<script>// Função para esconder o pop-up e definir um cookie de aceitação
+        function aceitarCookies() {
+            var popup = document.getElementById("cookiePopup");
+            popup.style.display = "none";
+
+            // Definir um cookie com validade de 30 dias (ou o valor desejado)
+            var data = new Date();
+            data.setTime(data.getTime() + (30 * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + data.toUTCString();
+            document.cookie = "cookiesAceitos=true;" + expires + ";path=/";
+        }
+
+        // Verificar se o cookie de aceitação já foi definido
+        function verificarCookies() {
+            var cookiesAceitos = document.cookie.match('(^|;)\\s*cookiesAceitos\\s*=\\s*([^;]+)');
+            if (!cookiesAceitos) {
+                var popup = document.getElementById("cookiePopup");
+                popup.style.display = "block";
+            }
+        }
+
+        // Executar a verificação assim que a página for carregada
+        verificarCookies();
+    </script>
+
 
     
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
